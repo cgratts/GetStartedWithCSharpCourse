@@ -1,0 +1,14 @@
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\bin\Debug\net7.0\Module5.exe
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\bin\Debug\net7.0\Module5.deps.json
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\bin\Debug\net7.0\Module5.runtimeconfig.json
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\bin\Debug\net7.0\Module5.dll
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\bin\Debug\net7.0\Module5.pdb
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\Module5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\Module5.AssemblyInfoInputs.cache
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\Module5.AssemblyInfo.cs
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\Module5.csproj.CoreCompileInputs.cache
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\Module5.dll
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\refint\Module5.dll
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\Module5.pdb
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\Module5.genruntimeconfig.cache
+C:\Users\Charby\GetStartedWithC#Pt3\Module5\obj\Debug\net7.0\ref\Module5.dll

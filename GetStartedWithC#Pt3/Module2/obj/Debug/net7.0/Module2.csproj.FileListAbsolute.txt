@@ -1,0 +1,14 @@
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\Module2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\Module2.AssemblyInfoInputs.cache
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\Module2.AssemblyInfo.cs
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\Module2.csproj.CoreCompileInputs.cache
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\bin\Debug\net7.0\Module2.exe
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\bin\Debug\net7.0\Module2.deps.json
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\bin\Debug\net7.0\Module2.runtimeconfig.json
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\bin\Debug\net7.0\Module2.dll
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\bin\Debug\net7.0\Module2.pdb
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\Module2.dll
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\refint\Module2.dll
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\Module2.pdb
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\Module2.genruntimeconfig.cache
+C:\Users\Charby\GetStartedWithC#Pt3\Module2\obj\Debug\net7.0\ref\Module2.dll
