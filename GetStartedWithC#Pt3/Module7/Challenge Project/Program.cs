@@ -512,30 +512,83 @@ do
             break;
         
         case "7":
-            // Display all cats with a specified characteristic
-            Console.WriteLine("Enter a physical characteristic of a cat you would like to search for");
-            readResult = Console.ReadLine();
+            // Display all cats with one or more search characteristics
+            string catCharacteristics = "";
 
-            if (readResult != null)
+            while (catCharacteristics == "")
             {
-                for (int i = 0; i < maxPets; i++)
-                {
-                    if(ourAnimals[i,1] == "Species: cat" && ourAnimals[i,4].Contains(readResult)) // If Physical description contains user entry
-                    {
-                        Console.WriteLine();
+                // Have user enter multiple comma separated characteristics to search for
+                Console.WriteLine($"\nEnter one or more cat characteristic(s) to search for separated by commas");
+                readResult = Console.ReadLine();
 
-                        for (int j = 0; j < 6; j++)
-                        {
-                            Console.WriteLine(ourAnimals[i, j].ToString());
-                        }
-                    }
-                    else
+                if (readResult != null)
+                {
+                    catCharacteristics = readResult.ToLower();
+                    Console.WriteLine();
+                }
+            }
+
+            string[] catSearches = catCharacteristics.Split(",");
+            // Trim leading and trailing spaces from each search term
+            for (int i = 0; i < catSearches.Length; i++)
+            {
+                catSearches[i] = catSearches[i].Trim();
+            }
+
+            Array.Sort(catSearches);
+            // Update to "rotating" search animation with countdown
+            string[] searchingIcons1 = {" |", " /", "--", " \\", " *"};
+
+            bool matchesAnyCat = false;
+            string catDescription = "";
+
+            // Search array for matching animals
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 1].Contains("cat"))
+                {
+                    // Search combined descriptions and print results
+                    catDescription = ourAnimals[i, 4] + "\n" + ourAnimals[i, 5];
+                    bool matchesCurrentCat = false;
+
+                    foreach (string term in catSearches)
                     {
-                        if(i == maxPets - 1) // If no match was found in the entire list
+                        // Only search if there is a term to search for
+                        if (term != null && term.Trim() != "")
                         {
-                            Console.WriteLine("No cats match the entered physical characteristic");
+                            for (int j = 2; j > -1 ; j--)
+                            {
+                                // Update "searching" message to show countdown
+                                foreach (string icon in searchingIcons1)
+                                {
+                                    Console.Write($"\rsearching our cat{ourAnimals[i, 3].Substring(9)} for {term.Trim()} {icon} {j.ToString()}");
+                                    Thread.Sleep(100);
+                                }
+                                
+                                Console.Write($"\r{new String(' ', Console.BufferWidth)}");
+                            }
+
+                            // Iterate entered characteristic terms and search description for each term
+                            if (catDescription.Contains(" " + term.Trim()))
+                            {
+                                // Update message to reflect current search term match 
+                                Console.WriteLine($"\rOur cat{ourAnimals[i, 3].Substring(9)} matches your search for {term.Trim()}");
+
+                                matchesCurrentCat = true;
+                                matchesAnyCat = true;
+                            }
                         }
                     }
+                    // If the current cat is a match, display the cat's info
+                    if (matchesCurrentCat)
+                    {
+                        Console.WriteLine($"\n\r{ourAnimals[i, 3]} ({ourAnimals[i, 0]})\n{catDescription}\n");
+                    }
+                }
+                // If there are no matches in the entire list
+                if(!matchesAnyCat && i == maxPets - 1)
+                {
+                    Console.WriteLine($"None of our cats match your search for {readResult}");
                 }
             }
 
@@ -544,32 +597,86 @@ do
             break;
 
         case "8":
-            // Display all dogs with a specified characteristic
-            Console.WriteLine("Enter a physical characteristic of a dog you would like to search for");
-            readResult = Console.ReadLine();
+            // Display all dogs with one or more search characteristics
+            string dogCharacteristics = "";
 
-            if (readResult != null)
+            while (dogCharacteristics == "")
             {
-                for (int i = 0; i < maxPets; i++)
-                {
-                    if(ourAnimals[i,1] == "Species: dog" && ourAnimals[i,4].Contains(readResult)) // If Physical description contains user entry
-                    {
-                        Console.WriteLine();
+                // Have user enter multiple comma separated characteristics to search for
+                Console.WriteLine($"\nEnter one or more dog characteristic(s) to search for separated by commas");
+                readResult = Console.ReadLine();
 
-                        for (int j = 0; j < 6; j++)
-                        {
-                            Console.WriteLine(ourAnimals[i, j].ToString());
-                        }
-                    }
-                    else
-                    {
-                        if(i == maxPets - 1) // If no match was found in the entire list
-                        {
-                            Console.WriteLine("No dogs match the entered physical characteristic");
-                        }
-                    }
+                if (readResult != null)
+                {
+                    dogCharacteristics = readResult.ToLower();
+                    Console.WriteLine();
                 }
             }
+
+            string[] dogSearches = dogCharacteristics.Split(",");
+            // Trim leading and trailing spaces from each search term
+            for (int i = 0; i < dogSearches.Length; i++)
+            {
+                dogSearches[i] = dogSearches[i].Trim();
+            }
+
+            Array.Sort(dogSearches);
+            // Update to "rotating" search animation with countdown
+            string[] searchingIcons2 = {" |", " /", "--", " \\", " *"};
+
+            bool matchesAnyDog = false;
+            string dogDescription = "";
+
+            // Search array for matching animals
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 1].Contains("dog"))
+                {
+                    // Search combined descriptions and print results
+                    dogDescription = ourAnimals[i, 4] + "\n" + ourAnimals[i, 5];
+                    bool matchesCurrentDog = false;
+
+                    foreach (string term in dogSearches)
+                    {
+                        // Only search if there is a term to search for
+                        if (term != null && term.Trim() != "")
+                        {
+                            for (int j = 2; j > -1 ; j--)
+                            {
+                                // Update "searching" message to show countdown
+                                foreach (string icon in searchingIcons2)
+                                {
+                                    Console.Write($"\rsearching our dog {ourAnimals[i, 3].Substring(9)} for {term.Trim()} {icon} {j.ToString()}");
+                                    Thread.Sleep(100);
+                                }
+                                
+                                Console.Write($"\r{new String(' ', Console.BufferWidth)}");
+                            }
+
+                            // Iterate entered characteristic terms and search description for each term
+                            if (dogDescription.Contains(" " + term.Trim()))
+                            {
+                                // Update message to reflect current search term match 
+                                Console.WriteLine($"\rOur dog {ourAnimals[i, 3].Substring(9)} matches your search for {term.Trim()}");
+
+                                matchesCurrentDog = true;
+                                matchesAnyDog = true;
+                            }
+                        }
+                    }
+                    // If the current dog is a match, display the dog's info
+                    if (matchesCurrentDog)
+                    {
+                        Console.WriteLine($"\n\r{ourAnimals[i, 3]} ({ourAnimals[i, 0]})\n{dogDescription}\n");
+                    }
+                }
+                // If there are no matches in the entire list
+                if(!matchesAnyDog && i == maxPets - 1)
+                {
+                    Console.WriteLine($"None of our dogs match your search for {readResult}");
+                }
+            }
+
             Console.WriteLine("\nPress the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
