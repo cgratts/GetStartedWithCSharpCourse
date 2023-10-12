@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "C#: Module7",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\..\\GetStartedWithC#Pt4\\Module7\\Final.csproj",
+            "launchConfigurationId": "TargetFramework=;Module7"
+        }
+    ]
+}

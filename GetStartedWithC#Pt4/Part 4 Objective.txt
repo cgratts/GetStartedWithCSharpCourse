@@ -1,0 +1,1 @@
+Work with variable data in C# console applications
